@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fashion Quest</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
@@ -12,6 +16,415 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>hello world</h1>
+    <header class="max-w-[100%]">
+      <div
+        class="nav_container bg-[#1A187A] flex flex-row justify-around items-center gap-5 lg:w-full"
+      >
+        <div class="img_div">
+          <img class="w-[130px] lg:w-[200px]" src="image/Group 2.png" alt="" />
+        </div>
+
+        <div
+          class="navInput bg-white hidden lg:flex justify-start items-center rounded-lg"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass text-gray-400 w-[150px] h-[5vh] px-4 pt-2"
+          ></i>
+          <input
+            class="rounded-lg items-start"
+            type="text"
+            placeholder="Search"
+          />
+        </div>
+        <div class="menu_ba hidden lg:flex">
+          <ul class="menu menu-horizontal text-xl text-[#707070] font-semibold">
+            <li>
+              <a><span class="text-white">Home</span></a>
+            </li>
+            <li>
+              <a>About</a>
+            </li>
+            <li>
+              <a>Contact</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping text-white"></i>
+            </li>
+            <li>
+              <i class="fa-regular fa-user text-white"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar w-[10%] block lg:hidden">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-white font-bold"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Cart</a></li>
+                <li><a>Users</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel w-full h-[80vh]">
+        <div
+          id="slide1"
+          class="carousel-item w-full h-[60vh] lg:h-[80vh] relative overflow-hidden"
+        >
+          <div
+            class="description absolute lg:top-[30%] left-[10%] space-y-4 text-center lg:text-right pt-4 lg:pt-0 mr-10 lg:mr-0"
+          >
+            <h1 class="text-4xl lg:text-6xl text-black">
+              IPhone <span class="font-bold">14 Pro</span>
+            </h1>
+            <p>Created to change everything for the better. For everyone</p>
+            <button class="btn bg-[#171495] text-white font-bold px-4">
+              Shop Now
+            </button>
+          </div>
+          <img src="image/banner.png" class="w-full h-[60vh] lg:h-[80vh]" />
+          <img
+            src="image/Iphone_Image.png"
+            class="absolute w-[40%] lg:w-[25%] left-[35%] lg:left-[65%] top-[45%] lg:top-[15%]"
+            alt=""
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle bg-[#00000001]">❮</a>
+            <a href="#slide2" class="btn btn-circle bg-[#00000001]">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full overflow-hidden">
+          <div
+            class="description absolute lg:top-[30%] left-[10%] space-y-4 text-center lg:text-right pt-4 lg:pt-0 mr-10 lg:mr-0"
+          >
+            <h1 class="text-4xl lg:text-6xl text-black">
+              IPhone <span class="font-bold">14 Pro Max</span>
+            </h1>
+            <p>Created to change everything for the better. For everyone</p>
+            <button class="btn bg-[#171495] text-white font-bold px-4">
+              Shop Now
+            </button>
+          </div>
+          <img src="image/banner.png" class="w-full h-[60vh] lg:h-[80vh]" />
+          <img
+            src="image/Iphoned_14_ pro_ 1_2.png"
+            class="absolute w-[50%] lg:w-[25%] left-[30%] lg:left-[65%] top-[45%] lg:top-[15%]"
+            alt=""
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle bg-[#00000001]">❮</a>
+            <a href="#slide3" class="btn btn-circle bg-[#00000001]">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full overflow-hidden">
+          <div
+            class="description absolute lg:top-[30%] left-[10%] space-y-4 text-center lg:text-right pt-4 lg:pt-0 mr-10 lg:mr-0"
+          >
+            <h1 class="text-4xl lg:text-6xl text-black">
+              Apple <span class="font-bold">Watch Pro</span>
+            </h1>
+            <p>Created to change everything for the better. For everyone</p>
+            <button class="btn bg-[#171495] text-white font-bold px-4">
+              Shop Now
+            </button>
+          </div>
+          <img src="image/banner.png" class="w-full h-[60vh] lg:h-[80vh]" />
+          <img
+            src="image/Iphone_14_pro_1_1.png"
+            class="absolute w-[50%] lg:w-[25%] left-[30%] lg:left-[65%] top-[45%] lg:top-[15%]"
+            alt=""
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle bg-[#00000001]">❮</a>
+            <a href="#slide4" class="btn btn-circle bg-[#00000001]">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full overflow-hidden">
+          <div
+            class="description absolute lg:top-[30%] left-[10%] space-y-4 text-center lg:text-right pt-4 lg:pt-0 mr-10 lg:mr-0"
+          >
+            <h1 class="text-4xl lg:text-6xl text-black">
+              Nikon <span class="font-bold">700D</span>
+            </h1>
+            <p>Created to change everything for the better. For everyone</p>
+            <button class="btn bg-[#171495] text-white font-bold px-4">
+              Shop Now
+            </button>
+          </div>
+          <img src="image/banner.png" class="w-full h-[60vh] lg:h-[80vh]" />
+          <img
+            src="image/Iphone_14_pro_1_3.png"
+            class="absolute w-[50%] lg:w-[25%] left-[30%] lg:left-[65%] top-[45%] lg:top-[15%]"
+            alt=""
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle bg-[#00000001]">❮</a>
+            <a href="#slide1" class="btn btn-circle bg-[#00000001]">❯</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[100%] mt-0 relative bottom-2">
+      <div class="product_container lg:grid grid-cols-2 grid-rows-2 lg:h-[80vh]">
+        <div class="flex justify-around items-center p-5">
+          <img class="w-[50%] h-[30vh] lg:h-auto" src="image/ipad.png" alt="" />
+          <div class="Phn_description">
+            <h1 class="text-5xl font-bold">iPad 9</h1>
+            <br />
+            <p class="text-gray-400">
+              For the latest and most accurate information about the iPad 9, I
+              recommend checking the official Apple website, Apple's
+              announcements, or reputable technology news sources for the most
+              recent updates on iPad models.
+            </p>
+          </div>
+        </div>
+        <div
+          class="block lg:flex justify-around items-center p-5 bg-[#EDEDED] row-span-2 space-y-6"
+        >
+          <div class="Phn_description">
+            <h1 class="text-5xl">Macbook <span class="font-bold">Air</span></h1>
+            <br />
+            <p class="text-gray-400">
+              The MacBook Air is known for its thin design, high-resolution
+              Retina display, and long battery life. It runs on Apple's macOS
+              operating system and is powered by Apple's custom M1 or Intel
+              processors, depending on the model.
+            </p>
+            <button class="btn bg-[#171495] text-white font-bold px-4 mt-4">
+              Shop Now
+            </button>
+          </div>
+          <img
+            class="w-[100%] lg:w-[50%] h-[50vh]"
+            src="image/Group_6.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="block lg:flex justify-around items-center bg-[#ADC2D7] overflow-hidden p-5 gap-10"
+        >
+          <img
+            class="w-[100%] lg:w-[50%]"
+            src="image/hero__gnfk5g59t0qe_xlarge_2x_1.png"
+            alt=""
+          />
+          <div class="Phn_description">
+            <h1 class="text-5xl">
+              Apple AirPods <span class="font-bold">Max</span>
+            </h1>
+            <br />
+            <p class="text-white">
+              Keep in mind that Apple may release new products or updates, so
+              it's advisable to check the official Apple website.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category_container  lg:mx-40 lg:my-16 space-y-10 p-2 lg:p-10">
+        <div class="flex justify-between items-center w-full">
+          <h1 class="text-4xl">Browse By Category</h1>
+          <div class="icon">
+            <i class="fa-solid fa-angle-left text-4xl"></i>
+            <i class="fa-solid fa-angle-right text-4xl"></i>
+          </div>
+        </div>
+        <div class="max-w-7xl grid grid-cols-2 lg:grid-cols-6 gap-2">
+          <div
+            class="h-40 px-10 py-6 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <i class="fa-solid fa-mobile-screen-button text-6xl"></i>
+            <h1 class="text-lg font-semibold">Phones</h1>
+          </div>
+          <div
+            class="h-40 px-10 py-6 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <i class="fa-solid fa-stopwatch-20 text-6xl"></i>
+            <h1 class="text-lg font-semibold">SmartWatch</h1>
+          </div>
+          <div
+            class="h-40 px-10 py-6 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <i class="fa-solid fa-camera text-6xl"></i>
+            <h1 class="text-lg font-semibold">Camera</h1>
+          </div>
+          <div
+            class="h-40 px-10 py-6 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <i class="fa-solid fa-headphones-simple text-6xl"></i>
+            <h1 class="text-lg font-semibold">Headphones</h1>
+          </div>
+          <div
+            class="h-40 px-10 py-6 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <i class="fa-solid fa-display text-6xl"></i>
+            <h1 class="text-lg font-semibold">Computer</h1>
+          </div>
+          <div
+            class="h-40 px-10 py-6 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <i class="fa-solid fa-gamepad text-6xl"></i>
+            <h1 class="text-lg font-semibold">Gaming</h1>
+          </div>
+        </div>
+      </div>
+      <div class="card mx-2 lg:mx-40 lg:my-16 space-y-10">
+        <div class="flex justify-start items-center w-full space-x-6">
+          <h1 class="text-lg font-semibold">New Arrival</h1>
+          <h1 class="text-lg">Bestseller</h1>
+          <h1 class="text-lg">Featured Products</h1>
+        </div>
+        <div class="grid  grid-cols-2 lg:grid-cols-4 gap-2">
+          <div
+            class="lg:px-6 py-4 lg:py-12 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <img
+              src="image/Iphoned_14_ pro_ 1_2.png"
+              class="w-[200px] h-[150px]"
+              alt=""
+            />
+            <p class="text-center">
+              Apple iPhone 14 Pro Max <br />
+              128GB Deep Purple <br />
+              (MQ9T3RX/A)
+            </p>
+            <span class="font-bold text-2xl">$900</span>
+            <button class="btn bg-[#000] text-white font-bold px-4 mt-4">
+              Shop Now
+            </button>
+          </div>
+          <div
+            class="lg:px-6 lg:py-12 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <img
+              src="image/Iphone_14_pro_1_3.png"
+              class="w-[200px] h-[150px]"
+              alt=""
+            />
+            <p class="text-center">Blackmagic Pocket Cinema Camera 6k</p>
+            <span class="font-bold text-2xl">$2325</span>
+            <button class="btn bg-[#000] text-white font-bold px-4 mt-4">
+              Shop Now
+            </button>
+          </div>
+          <div
+            class="lg:px-6 py-4 lg:py-12 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <img
+              src="image/Iphone_14_pro_1_1.png"
+              class="w-[200px] h-[150px]"
+              alt=""
+            />
+            <p class="text-center">
+              Apple Watch Series 9 GPS 41mm <br />
+              Starlight Aluminium Case
+            </p>
+            <span class="font-bold text-2xl">$500</span>
+            <button class="btn bg-[#000] text-white font-bold px-4 mt-4">
+              Shop Now
+            </button>
+          </div>
+          <div
+            class="lg:px-6 lg:py-12 space-y-4 rounded-2xl bg-[#EDEDED] flex justify-center items-center flex-col"
+          >
+            <img
+              src="image/Iphone_14_pro_1.png"
+              class="w-[200px] h-[150px]"
+              alt=""
+            />
+            <p class="text-center">AirPods Max Silver</p>
+            <span class="font-bold text-2xl">$599</span>
+            <button class="btn bg-[#000] text-white font-bold px-4 mt-4">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dicount flex flex-col lg:flex-row justify-between items-center gap-10 w-full mt-24 bg-[#958AD4] py-10">
+        <div>
+          <img class="w-[500px]" src="image/image19.png" alt="" />
+        </div>
+        <div class="text-center space-y-4">
+          <h1 class="text-5xl font-extrabold text-white"><span class="text-[#25177B]">11.11</span> Sale</h1>
+          <p class="text-white">
+            Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do
+            eiusmod <br> tempor incididunt ut labore et
+          </p>
+        </div>
+        <div>
+          <img src="image/jbl_jr_310bt_blue.png" alt="">
+        </div>
+      </div>
+    </main>
+    <footer class="mt-20">
+      <div
+        class="footer_container gap-8 lg:gap-20 bg-black w-full h-full p-10 lg:p-32 flex flex-col lg:flex-row justify-evenly items-center"
+      >
+        <div class="text-center lg:text-left">
+          <div class="img_div">
+          <img class="w-[130px] lg:w-[200px]" src="image/Group 2.png" alt="" />
+        </div>
+        </div>
+        <div class="flex  flex-col-reverse lg:flex-row gap-20">
+          <div class="icons flex gap-10">
+            <i class="fa-brands fa-facebook-f text-white"></i>
+            <i class="fa-brands fa-twitter text-white"></i>
+            <i class="fa-brands fa-tiktok text-white"></i>
+            <i class="fa-brands fa-instagram text-white"></i>
+          </div>
+          <div>
+            <span class="text-white font-bold text-lg pb-4">Services</span><br />
+            <span class="text-gray-400">Bonus Program</span><br />
+            <span class="text-gray-400">Gift card</span><br />
+            <span class="text-gray-400">Credit and payment</span><br />
+            <span class="text-gray-400">Service Contracts</span><br>
+            <span class="text-gray-400">Non Cash Account</span><br>
+            <span class="text-gray-400">payment</span>
+          </div>
+          <div>
+            <h2 class="text-white font-bold text-lg pb-4">Assistance to the buyer</h2>
+            <span class="text-gray-400">Find An Order</span><br />
+            <span class="text-gray-400">Terms of delivery</span><br />
+            <span class="text-gray-400">Exchange and return of goods</span><br />
+            <span class="text-gray-400">Guarantee</span><br>
+            <span class="text-gray-400">Frequently Asked Questions</span><br>
+            <span class="text-gray-400">Terms of use of the site</span>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
   </body>
 </html>
